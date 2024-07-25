@@ -51,17 +51,26 @@ final class ProfileSettingView: BaseView {
         return label
     }()
     
+    private let mbtiLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = "MBTI"
+        label.font = .boldSystemFont(ofSize: 20)
+        
+        return label
+    }()
+    
     private let mbtiButtons: [UIButton] = {
         let types = ["E", "S", "T", "J", "I", "N", "F", "P"]
         return types.map { type in
             let button = UIButton(type: .system)
             button.setTitle(type, for: .normal)
             button.setTitleColor(.black, for: .normal)
-            button.layer.cornerRadius = 20
+            button.layer.cornerRadius = 25
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.lightGray.cgColor
             button.snp.makeConstraints { make in
-                make.width.height.equalTo(40)
+                make.width.height.equalTo(50)
             }
             return button
         }
@@ -85,6 +94,7 @@ final class ProfileSettingView: BaseView {
         profileCameraView.addSubview(profileCameraImage)
         addSubview(nicknameTextField)
         addSubview(nicknameErrorLabel)
+        addSubview(mbtiLabel)
         mbtiButtons.forEach { addSubview($0) }
         addSubview(completeButton)
     }
@@ -117,12 +127,18 @@ final class ProfileSettingView: BaseView {
             make.left.right.equalToSuperview().inset(20)
         }
         
+        mbtiLabel.snp.makeConstraints { make in
+            make.top.equalTo(nicknameErrorLabel.snp.bottom).offset(20)
+            make.leading.equalTo(safeAreaLayoutGuide).offset(20)
+            make.height.equalTo(30)
+        }
+        
         for (index, button) in mbtiButtons.enumerated() {
             let row = index / 4
             let column = index % 4
             button.snp.makeConstraints { make in
-                make.top.equalTo(nicknameErrorLabel.snp.bottom).offset(20 + row * 50)
-                make.left.equalToSuperview().inset(20 + column * 50)
+                make.top.equalTo(nicknameErrorLabel.snp.bottom).offset(20 + row * 60)
+                make.left.equalToSuperview().inset(150 + column * 60)
             }
         }
         

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FE5352272C50843900F1A2AB /* AssetManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5352262C50843900F1A2AB /* AssetManage.swift */; };
 		FE5352642C50D44000F1A2AB /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5352632C50D44000F1A2AB /* ProfileButton.swift */; };
+		FE5352672C51D2F200F1A2AB /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FEAB64BC2C4E2740001266B8 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FEAB64A22C4E268D001266B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB64A12C4E268D001266B8 /* AppDelegate.swift */; };
 		FEAB64A42C4E268D001266B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB64A32C4E268D001266B8 /* SceneDelegate.swift */; };
 		FEAB64A62C4E268D001266B8 /* SearchPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB64A52C4E268D001266B8 /* SearchPhotoViewController.swift */; };
@@ -31,6 +32,20 @@
 		FEEF75A02C4F976B00CCDD48 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF759F2C4F976B00CCDD48 /* ProfileSettingViewController.swift */; };
 		FEEF75A22C4F9A9000CCDD48 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEF75A12C4F9A9000CCDD48 /* Observable.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE5352682C51D2F200F1A2AB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE5352672C51D2F200F1A2AB /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FE5352262C50843900F1A2AB /* AssetManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManage.swift; sourceTree = "<group>"; };
@@ -171,6 +186,7 @@
 				FEAB649A2C4E268D001266B8 /* Sources */,
 				FEAB649B2C4E268D001266B8 /* Frameworks */,
 				FEAB649C2C4E268D001266B8 /* Resources */,
+				FE5352682C51D2F200F1A2AB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
